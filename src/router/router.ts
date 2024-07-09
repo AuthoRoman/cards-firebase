@@ -9,7 +9,7 @@ import Login from "../pages/Login.vue";
 
 const routes = [
   {
-    path: "/cards-firebase",
+    path: "/cards-firebase/",
     component: MainMenu,
     meta: { requiresAuth: true },
   },
