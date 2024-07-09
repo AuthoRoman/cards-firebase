@@ -1,6 +1,7 @@
 <template>
     <div>
-        Contacts
+        <h1>Contacts</h1>
+        <p>Our Contacts : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit cumque quam ducimus quisquam enim beatae neque!</p>
     </div>
 </template>
 

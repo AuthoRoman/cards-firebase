@@ -1,8 +1,9 @@
-<!-- src/views/Login.vue -->
+
 <template>
-    <div>
-      <h1>Login</h1>
-      <form @submit.prevent="login">
+    <div class="login">
+      <div class="login__inner">
+        <h1>Login</h1>
+      <form class="loginForm" @submit.prevent="login">
         <input v-model="email" type="email" placeholder="Email" required />
         <input v-model="password" type="password" placeholder="Password" required />
         <button type="submit">Login</button>
@@ -10,6 +11,8 @@
       </form>
       <p v-if="error">{{ error }}</p>
     </div>
+      </div>
+      
   </template>
   
   <script lang="ts">
@@ -39,4 +42,33 @@
     }
   });
   </script>
+
+  <style scoped>
+
+  .login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.589);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .login__inner{
+    max-width: 400px;
+    max-height: fit-content;
+    padding: 12px;
+    background-color: white;
+    border-radius: 15px;
+   }
+
+   .loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 15px;
+   }
+  </style>
   

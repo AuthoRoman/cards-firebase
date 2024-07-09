@@ -6,7 +6,7 @@
 
 </router-link> </li>
                 <li  ><router-link class="list__item" to="/cards-firebase/about">О предмете</router-link> </li>
-                <li  ><router-link class="list__item" to="/cards-firebase/">Контакты</router-link> </li>
+                <li  ><router-link class="list__item" to="/cards-firebase/contacts">Контакты</router-link> </li>
                 <li v-if="user !== null"><button @click="logout">Logout</button></li>
             </ul>
         </nav>
