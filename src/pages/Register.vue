@@ -38,7 +38,7 @@
               name: name.value,
               createdAt: new Date()
             });
-            router.push('/');
+            router.push('/cards-firebase/');
           }
         } catch (err) {
           error.value = (err as Error).message;

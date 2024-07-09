@@ -2,11 +2,11 @@
      
         <nav>
             <ul class="navList">
-                <li ><router-link class="list__item" to="/">Главная
+                <li ><router-link class="list__item" to="/cards-firebase">Главная
 
 </router-link> </li>
-                <li  ><router-link class="list__item" to="/about">О предмете</router-link> </li>
-                <li  ><router-link class="list__item" to="/contacts">Котакты</router-link> </li>
+                <li  ><router-link class="list__item" to="/cards-firebase/about">О предмете</router-link> </li>
+                <li  ><router-link class="list__item" to="/cards-firebase/">Контакты</router-link> </li>
                 <li v-if="user !== null"><button @click="logout">Logout</button></li>
             </ul>
         </nav>
@@ -28,7 +28,7 @@ const user = inject<User | null>('user');
 const logout = async () => {
   try {
     await auth.signOut();  
-    router.push('/login');  
+    router.push('/cards-firebase/login');  
   } catch (error) {
     console.error('Error logging out:', );
   }

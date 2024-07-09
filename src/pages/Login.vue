@@ -6,7 +6,7 @@
         <input v-model="email" type="email" placeholder="Email" required />
         <input v-model="password" type="password" placeholder="Password" required />
         <button type="submit">Login</button>
-        <button @click="$router.push('/register')">Register</button>
+        <button @click="$router.push('/cards-firebase/register')">Register</button>
       </form>
       <p v-if="error">{{ error }}</p>
     </div>
@@ -29,7 +29,7 @@
         error.value = null;
         try {
           await signInWithEmailAndPassword(auth, email.value, password.value);
-          router.push('/');
+          router.push('/cards-firebase/register');
         } catch (err) {
           error.value = (err as Error).message;
         }

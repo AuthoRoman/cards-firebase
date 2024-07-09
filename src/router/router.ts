@@ -9,26 +9,26 @@ import Login from "../pages/Login.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/cards-firebase",
     component: MainMenu,
     meta: { requiresAuth: true },
   },
   {
-    path: "/about",
+    path: "/cards-firebase/about",
     component: About,
     meta: { requiresAuth: true },
   },
   {
-    path: "/contacts",
+    path: "/cards-firebase/contacts",
     component: Contacts,
     meta: { requiresAuth: true },
   },
   {
-    path: "/register",
+    path: "/cards-firebase/register",
     component: Register,
   },
   {
-    path: "/login",
+    path: "/cards-firebase/login",
     component: Login,
   },
 ];
@@ -42,7 +42,7 @@ router.beforeEach((to, _from, next) => {
   const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
   const currentUser = auth.currentUser;
   if (requiresAuth && !currentUser) {
-    next("/login");
+    next("./cards-firebase/login");
   } else {
     next();
   }
